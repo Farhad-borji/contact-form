@@ -7,6 +7,7 @@
 
 body {
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,8 +19,8 @@ body {
 .container {
   position: relative;
   max-width: 700px;
-  background-color: #fff;
   width: 100%;
+  background-color: #fff;
   border-radius: 8px;
   padding: 25px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -28,7 +29,6 @@ body {
 header {
   font-size: 1.5rem;
   font-weight: bold;
-
   margin-bottom: 30px;
 }
 
@@ -61,4 +61,63 @@ input {
 
 input:focus {
   border-color: #0c7d69;
+}
+
+#email {
+  margin-bottom: 30px;
+}
+
+.query-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.query-checkbox {
+  width: 49%;
+  display: flex;
+  gap: 10px;
+  border: 1px solid #707070;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.query-checkbox :where(input, label) {
+  cursor: pointer;
+}
+
+.query-checkbox input {
+  margin-top: 0;
+}
+
+#message {
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+.user-consent {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+#checkbox {
+  margin: 0 10px 0 0;
+}
+
+.form button {
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  border: 1px solid #707070;
+  cursor: pointer;
+  background-color: #0c7d69;
+  color: #fff;
+}
+
+.form button:hover {
+    background-color: #064f42;
 }
