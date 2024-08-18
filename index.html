@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Contact form</title>
+  </head>
+  <body>
+    <form>
+      <h1>Contact Us</h1>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Contact form</title>
+      <div class="name-container">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <form>
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" />
+      </div>
 
-    <h1>Contact Us</h1>
+      <label for="email"></label>
+      <input type="text" id="email" />
 
-  </form>
+      <div class="query-container">
+        <input type="radio" name="query-type" value="general Enquiry" />
+        <span>general Enquiry</span>
+        <input type="radio" name="query-type" value="support request" />
+        <span>Support Request</span>
+      </div>
 
-  First Name
-  This field is required
+      <label for="message">Message</label>
+      <input type="text" id="message" />
 
-  Last Name
-  This field is required
+      <input
+        type="checkbox"
+        id="checkbox"
+        name="user-accept"
+        value="Contact-accepted"
+      />
+      <span>I consent to being contacted by the team</span>
+    </form>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-</body>
+    <!-- Email Address Please enter a valid email address This field is required
+    Query Type General Enquiry Support Request Please select a query type
+    Message This field is required I consent to being contacted by the team To
+    submit this form, please consent to being contacted Submit Message Sent!
+    Thanks for completing the form. We'll be in touch soon! -->
+  </body>
 </html>
