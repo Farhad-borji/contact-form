@@ -14,57 +14,73 @@
     <link rel="stylesheet" href="./css/font.css" />
   </head>
   <body>
+    <section class="success-message">
+      <div>
+        <img src="./assets/images/icon-success-check.svg">
+        <p>Message sent!</p>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </section>
+
+
     <section class="container">
       <header>Contact Us</header>
 
-      <form class="form">
+      <form id="form" action="./index.html">
         <div class="name-input">
-          <div class="input-box">
+          <div class="input-box input-control" >
             <label for="first-name">First Name</label>
             <input type="text" id="first-name" />
+            <div class="error-box"></div>
           </div>
-          <div class="input-box">
+          <div class="input-box input-control">
             <label for="last-name">Last Name</label>
             <input type="text" id="last-name" />
+            <div class="error-box"></div>
           </div>
         </div>
 
+       <div class="email-box input-control">
         <label for="email">Email Address</label>
         <input type="text" id="email" />
+        <div class="error-box"></div>
+       </div>
 
+       <div class="query-container input-control">
         <p>Query type</p>
-        <label class="query-box" for="general-Enquiry" >
+        <label class="query-box" for="general-enquiry">
           <div class="query-checkbox">
-            <input type="radio" name="query-type" id="general-Enquiry" />
-            <label for="general-Enquiry">General Enquiry</label>
+            <input type="radio" name="query-type" id="general-enquiry" />
+            <label for="general-enquiry">General Enquiry</label>
           </div>
           <label class="query-checkbox" for="support-request">
             <input type="radio" name="query-type" id="support-request" />
             <label for="support-request">Support Request</label>
           </label>
         </label>
+        <div class="error-box"></div>
+       </div>
 
-        <label class="message-label" for="message">Message</label>
-        <textarea name="textarea" id="textarea"></textarea>
+        <label class="message-label">Message</label>
+        <textarea name="textarea" id="message"></textarea>
 
-        <div class="user-consent">
-          <input
-            type="checkbox"
-            id="checkbox"
-            name="user-accept"
-            value="Contact-accepted"
-          />
-          <label for="checkbox">I consent to being contacted by the team</label>
+        <div class="checkbox-container input-control">
+          <div class="user-consent">
+            <input
+              type="checkbox"
+              id="checkbox"
+              name="user-accept"
+              value="Contact-accepted"
+            />
+            <label for="checkbox">I consent to being contacted by the team</label>
+          </div>
+          <div class="error-box"></div>
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" id="button">Submit</button>
       </form>
     </section>
 
-    <!-- Email Address Please enter a valid email address This field is required
-    Query Type General Enquiry Support Request Please select a query type
-    Message This field is required I consent to being contacted by the team To
-    submit this form, please consent to being contacted Submit Message Sent!
-    Thanks for completing the form. We'll be in touch soon! -->
+    <script src="./js/script.js"></script>
   </body>
 </html>

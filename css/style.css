@@ -16,6 +16,30 @@ body {
   padding: 100px;
 }
 
+.success-message {
+  position: absolute;
+  top: 20px;
+  width: 350px;
+  height: 100px;
+  padding: 15px;
+  background: #064f42;
+  color: #fff;
+  border-radius: 10px;
+  z-index: 10000;
+  display: none;
+}
+
+.success-message div{
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+.success-message > p {
+  margin-top: 10px;
+  font-size: .8rem;
+}
+
 .container {
   position: relative;
   max-width: 700px;
@@ -32,12 +56,12 @@ header {
   margin-bottom: 30px;
 }
 
-.form {
+#form {
   display: flex;
   flex-direction: column;
 }
 
-.form .name-input {
+#form .name-input {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -64,7 +88,12 @@ input:focus,
   border-color: #0c7d69;
 }
 
-#email {
+.email-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-box {
   margin-bottom: 30px;
 }
 
@@ -105,7 +134,6 @@ input:focus,
 
 .user-consent {
   display: flex;
-  margin-bottom: 30px;
 }
 
 #checkbox {
@@ -113,7 +141,7 @@ input:focus,
   accent-color: #0c7d69;
 }
 
-#textarea {
+#message {
   resize: none;
   height: 120px;
   outline: none;
@@ -122,7 +150,13 @@ input:focus,
   margin: 10px 0 30px 0;
 }
 
-.form button {
+.input-control .error-box {
+  margin-top: 2px;
+  color: #d73c3c;
+  font-size: 0.8rem;
+}
+
+#form button {
   padding: 15px;
   font-size: 1.1rem;
   font-weight: bold;
@@ -131,11 +165,20 @@ input:focus,
   cursor: pointer;
   background-color: #0c7d69;
   color: #fff;
+  margin-top: 30px;
   transition: all 0.2s ease-in;
 }
 
-.form button:hover {
+#form button:hover {
   background-color: #064f42;
+}
+
+.success {
+  border-color: #0c7d69;
+}
+
+.error {
+  border-color: #d73c3c;
 }
 
 @media (max-width: 660px) {
