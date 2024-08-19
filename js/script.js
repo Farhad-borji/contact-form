@@ -9,8 +9,6 @@ const consent = document.getElementById("checkbox");
 const button = document.getElementById("button");
 const messageSuccess = document.querySelector(".success-message");
 
-let validation = false;
-
 const validateEmail = (email) => {
   return String(email)
     .toLowerCase()
@@ -23,7 +21,6 @@ const setError = (element, message) => {
   const inputControl = element.parentElement;
   const errorDisplay = inputControl.querySelector(".error-box");
 
-  validation = false;
   errorDisplay.innerText = message;
   inputControl.children[1].classList.add("error");
   inputControl.children[1].classList.remove("success");
@@ -33,7 +30,6 @@ const setSuccess = (element) => {
   const inputControl = element.parentElement;
   const errorDisplay = inputControl.querySelector(".error-box");
 
-  validation = true;
   errorDisplay.innerText = "";
   inputControl.children[1].classList.remove("error");
   inputControl.children[1].classList.add("success");
@@ -89,11 +85,19 @@ const validateInputs = () => {
     }
   }
 
-  if (validation) {
+  if (
+    firstNameValue &&
+    lastNameValue &&
+    emailValue &&
+    (() => validateEmail(emailValue)) &&
+    consent.checked &&
+    (general.checked || support.checked)
+  ) {
     messageSuccess.style.display = "block";
     setTimeout(() => {
       messageSuccess.style.display = "none";
     }, 2000);
+  } else {
   }
 };
 
