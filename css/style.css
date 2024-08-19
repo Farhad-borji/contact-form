@@ -59,7 +59,8 @@ input {
   padding: 10px 15px;
 }
 
-input:focus {
+input:focus,
+#textarea:focus {
   border-color: #0c7d69;
 }
 
@@ -80,7 +81,6 @@ input:focus {
   border: 1px solid #707070;
   border-radius: 6px;
   padding: 10px 15px;
-  margin-bottom: 30px;
   font-size: 1.1rem;
   cursor: pointer;
 }
@@ -90,7 +90,12 @@ input:focus {
 }
 
 .query-checkbox input {
+  accent-color: #0c7d69;
   margin-top: 0;
+}
+
+.message-label {
+  margin-top: 30px;
 }
 
 #message {
@@ -105,6 +110,16 @@ input:focus {
 
 #checkbox {
   margin: 0 10px 0 0;
+  accent-color: #0c7d69;
+}
+
+#textarea {
+  resize: none;
+  height: 120px;
+  outline: none;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px 0 30px 0;
 }
 
 .form button {
@@ -116,8 +131,26 @@ input:focus {
   cursor: pointer;
   background-color: #0c7d69;
   color: #fff;
+  transition: all 0.2s ease-in;
 }
 
 .form button:hover {
-    background-color: #064f42;
+  background-color: #064f42;
+}
+
+@media (max-width: 660px) {
+  .query-box {
+    flex-direction: column;
+  }
+  .query-checkbox {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .name-input {
+    flex-direction: column;
+  }
+  .name-input .input-box {
+    width: 100%;
+  }
 }
